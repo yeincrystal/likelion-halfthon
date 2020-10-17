@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>posts</title>
+        <link rel="stylesheet" href="{% static 'posts/style.css' %}" type="text/css"/>
+    </head>
+    <body>
+        <main>
+        <box>
+            <img id="profile" src="{% static 'posts/images/nature.jpg' %}"></img>
+        </box>    
+        <box>
+        <h1>My Posts</h1>
+        </box>
+
+        <box>
+        {% if posts %}
+        <ul>
+            {% for post in posts %}
+                <li>Author: {{post.author}} | Body: {{post.body}}</li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p>No Posts!</p>
+        {% endif %}
+        </box>
+        </main>
+    </body>
+</html>
