@@ -15,3 +15,4 @@
     <li>This page used Model in Django, which is a database</li>
     <li>URL was separated in a folder called 'posts/urls.py'</li>
   </ul>
+</div>
